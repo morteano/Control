@@ -1,0 +1,118 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:layout_width="90dp"
+        android:layout_height="100dp"
+        android:id="@+id/leftarrow"
+        android:background="@drawable/arrowleft"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:tag='a' />
+
+    <ImageButton
+        android:layout_width="90dp"
+        android:layout_height="100dp"
+        android:id="@+id/uparrow"
+        android:background="@drawable/arrowup"
+        android:layout_above="@+id/leftarrow"
+        android:layout_toRightOf="@+id/leftarrow"
+        android:layout_toEndOf="@+id/leftarrow"
+        android:tag='w' />
+
+    <ImageButton
+        android:layout_width="90dp"
+        android:layout_height="100dp"
+        android:id="@+id/rightarrow"
+        android:layout_toEndOf="@+id/uparrow"
+        android:background="@drawable/arrowright"
+        android:layout_below="@+id/uparrow"
+        android:layout_toRightOf="@+id/uparrow"
+        android:tag='d' />
+
+
+    <ImageButton
+        android:layout_width="90dp"
+        android:layout_height="100dp"
+        android:id="@+id/downarrow"
+        android:background="@drawable/arrowdown"
+        android:layout_toLeftOf="@+id/rightarrow"
+        android:layout_below="@+id/leftarrow"
+        android:layout_toRightOf="@+id/leftarrow"
+        android:tag='s' />
+
+    <ImageButton
+        android:layout_width="90dp"
+        android:layout_height="100dp"
+        android:id="@+id/rightaim"
+        android:background="@drawable/arrowright"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:tag='l' />
+
+    <ImageButton
+        android:layout_width="90dp"
+        android:layout_height="100dp"
+        android:id="@+id/upaim"
+        android:background="@drawable/arrowup"
+        android:layout_above="@+id/rightaim"
+        android:layout_toLeftOf="@+id/rightaim"
+        android:tag='i' />
+
+    <ImageButton
+        android:layout_width="90dp"
+        android:layout_height="100dp"
+        android:id="@+id/leftaim"
+        android:background="@drawable/arrowleft"
+        android:layout_below="@+id/upaim"
+        android:layout_toLeftOf="@+id/upaim"
+        android:tag='j' />
+
+    <ImageButton
+        android:layout_width="90dp"
+        android:layout_height="100dp"
+        android:id="@+id/downaim"
+        android:background="@drawable/arrowdown"
+        android:layout_toLeftOf="@+id/rightaim"
+        android:layout_below="@+id/rightaim"
+        android:tag='k' />
+
+    <ImageButton
+        android:layout_width="90dp"
+        android:layout_height="100dp"
+        android:id="@+id/fire"
+        android:background="@drawable/fire"
+        android:layout_toLeftOf="@+id/rightaim"
+        android:layout_toRightOf="@+id/leftaim"
+        android:layout_below="@+id/upaim"
+        android:tag=' ' />
+
+    <TextView
+        android:text="press a button"
+        android:textSize="40sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/testOutput"
+        android:layout_alignBottom="@+id/downarrow"
+        android:layout_centerHorizontal="true" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/laserButton"
+        android:layout_toEndOf="@+id/uparrow"
+        android:checked="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
